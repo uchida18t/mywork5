@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>20211117</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Readex+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- header -->
+  <header>
+    <h1>
+      <a href="/">
+        <img src="images/logo.svg" alt="PRESQUE POURRIE">
+      </a>
+    </h1>
+  </header>
+
+  <!-- loading -->
+  <div id="loading" class="loading">
+    <div class="loading-container">
+      <div class="loading-square-top"></div>
+      <div class="loading-square" style="--i:0;"></div>
+      <div class="loading-square" style="--i:1;"></div>
+      <div class="loading-square" style="--i:2;"></div>
+      <div class="loading-square" style="--i:3;"></div>
+    </div>
+    <p class="eng">
+      <span style="--a:0s">L</span>
+      <span style="--a:0.16s;">O</span>
+      <span style="--a:0.32s;color:#EFF556;">A</span>
+      <span style="--a:0.48s;">D</span>
+      <span style="--a:0.64s;">I</span>
+      <span style="--a:0.8s;color:#EF1D66;">N</span>
+      <span style="--a:0.96s;">G</span>
+      <span style="--a:1.12s;">.</span>
+      <span style="--a: 1.28s;">.</span>
+      <span style="--a: 1.44s;">.</span>
+    </p>
+  </div>
+
+  <!-- content -->
+  <div id="content" class="content">
+    <main class="top edge">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img src="images/top-img1.jpg" alt="top-img1">
+          </div>
+          <div class="swiper-slide">
+            <img src="images/top-img2.jpg" alt="top-img2">
+          </div>
+          <div class="swiper-slide">
+            <img src="images/top-img3.jpg" alt="top-img3">
+          </div>
+          <div class="swiper-slide">
+            <img src="images/top-img4.jpg" alt="top-img4">
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </main>
+
+    <div class="breadcrumbs edge">
+      <nav>
+        <ul>
+          <li>
+            <a class="scroll-anchor"><span class="eng">MENU</span><span class="s-br">メニュー</span></a>
+          </li>
+          <li>
+            <a class="scroll-anchor"><span class="eng">EVENT</span><span class="s-br">イベント</span></a>
+          </li>
+          <li>
+            <a class="scroll-anchor"><span class="eng">ACCESS</span><span class="s-br">アクセス</span></a>
+          </li>
+          <li>
+            <a class="scroll-anchor"><span class="eng">CONTACT</span><span class="s-br">お問い合わせ</span></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <section class="wrapper menu edge target">
+      <h2 class="wrapper-heading eng2">
+        <span>M</span>E<span>N</span>U
+      </h2>
+      <div class="menu-contents">
+        <ul>
+          <li class="scroll-fade"> <!-- 1 -->
+            <img src="images/menu-img1.jpg" alt="menu-img1">
+            <div>
+              <p>洋菓子</p>
+              <p>
+                <a
+                  href="menu/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                ><span class="eng">CONFECTIONERY</span></a>
+              </p>
+            </div>
+          </li>
+          <li class="scroll-fade"> <!-- 2 -->
+            <img src="images/menu-img2.jpg" alt="menu-img2">
+            <div>
+              <p>パン</p>
+              <p>
+                <a
+                  href="menu/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                ><span class="eng">BREAD</span></a>
+              </p>
+            </div>
+          </li>
+          <li class="scroll-fade"> <!-- 3 -->
+            <img src="images/menu-img3.jpg" alt="menu-img3">
+            <div>
+              <p>ドリンク</p>
+              <p>
+                <a
+                  href="menu/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                ><span class="eng">DRINK</span></a>
+              </p>
+            </div>
+          </li>
+          <li class="scroll-fade"> <!-- 4 -->
+            <img src="images/menu-img2.jpg" alt="menu-img2">
+            <div>
+              <p>パン</p>
+              <p>
+                <a
+                  href="menu/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                ><span class="eng">BREAD</span></a>
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="wrapper event edge target">
+      <h2 class="wrapper-heading eng2">
+        <span>E</span>VE<span>N</span>T
+      </h2>
+    </section>
+
+    <section class="wrapper access edge target">
+      <h2 class="wrapper-heading eng2">
+        <span>A</span>CCE<span>S</span>S
+      </h2>
+    </section>
+
+    <section class="wrapper contact edge target">
+      <h2 class="wrapper-heading eng2">
+        <span>C</span>ONTA<span>C</span>T
+      </h2>
+    </section>
+  </div>
+
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/swiper.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>

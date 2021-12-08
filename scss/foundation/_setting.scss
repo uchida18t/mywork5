@@ -1,0 +1,33 @@
+// box-shadow
+$ds-1: 0 3px 7px rgba(20, 20, 20, .4);
+$ds-2: 5px 5px 8px rgba(0, 0, 0, 0.6);
+$ds-2-2: -5px 5px 8px rgba(0, 0, 0, 0.6);
+
+// color
+$black: #222222;
+$white: #FFFFFF;
+$lightgray: #e6e6e6;
+$gray: #b3b3b3;
+$ocher: #836606;
+$greenG: linear-gradient(0deg, #0A5500, $white);
+$pink: #EF1D66;
+$yellow: #EFF556;
+
+// ヘッダーのheight
+$headerH: 85px;
+$spHeaderH: 52px;
+
+// 強調英字
+.eng {
+  font-family: 'Crimson Pro', serif;
+  letter-spacing: .06em;
+  &2 {
+    font-family: 'Readex Pro', sans-serif;
+    letter-spacing: .04em;
+  }
+}
+
+// span改行
+span.s-br {
+  display: block;
+}

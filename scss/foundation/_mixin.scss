@@ -1,0 +1,178 @@
+@use "foundation/setting" as *;
+
+// ブレイクポイント
+@mixin bp-1 {
+  @media (max-width: 1124px) {
+    @content;
+  }
+}
+
+// ヘッダー分の高さ調整
+@mixin hfMargin($mt: 0px) {
+  margin-top: calc($mt + $headerH);
+}
+
+// 画面端の線
+@mixin edge() {
+  @keyframes edge {
+    0%, 100% {
+      background-color: rgba($pink, .8);
+    }
+    33.33% {
+      background-color: rgba($white, .8);
+    }
+    66.66% {
+      background-color: rgba($yellow, 1);
+    }
+  }
+  .edge {
+    position: relative;
+    padding-left: 64px;
+    padding-right: 64px;
+    transition: padding-left .7s, padding-right .7s;
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      width: 1px;
+      height: 0;
+      position: absolute;
+      top: 0;
+      animation: edge 6s linear infinite;
+      transition: height 2s .2s, left .7s, right .7s;
+    }
+    &::before {
+      left: 40px;
+    }
+    &::after {
+      right: 40px;
+    }
+    &.loaded {
+      &::before,
+      &::after {
+        height: 100%;
+      }
+    }
+    @include bp-1 {
+      padding-left: 30px;
+      padding-right: 30px;
+      &::before {
+        left: 20px;
+      }
+      &::after {
+        right: 20px;
+      }
+    }
+  }
+}
+
+// hover時の文字透かし
+@mixin hoverTransparentize($color, $v) {
+  transition: color .3s;
+  &:hover {
+    color: rgba($color, $v);
+  }
+}
+
+// hover時のライン
+@mixin hoverLine($height, $bColor) {
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0px;
+    height: $height;
+    background-color: $white;
+    transition: width .35s, background-color .2s;
+  }
+  &:hover {
+    &::before {
+      width: 100%;
+      background-color: $bColor;
+    }
+  }
+}
+
+// h2見出し
+@mixin h2() {
+  h2 {
+    text-align: right;
+    font-size: 6.6rem;
+    text-shadow: 3px 3px 4px rgba($gray, .3);
+    transform: translateY(-18px);
+    z-index: 5;
+    transition: all .3s;
+    span {
+      &:nth-of-type(1) {
+        font-size: 10.4rem;
+      }
+      &:nth-of-type(2) {
+        color: $pink;
+      }
+    }
+    &.fixed-out {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+  }
+  &.fixed {
+    padding-top: 134px;
+    h2 {
+      position: fixed;
+      top: calc(85px + 30px);
+      right: 64px;
+    }
+  }
+}
+
+// スクロールでフェード
+@mixin scrollFade($y) {
+  opacity: 0;
+  transform: translateY($y);
+  transition: all .4s;
+  &-in {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+// loadingの回転アニメーション
+@mixin loading1 {
+  animation: round 4s linear infinite;
+  @keyframes round {
+    0% {
+      transform: rotateX(-20deg) rotateY(0deg);
+    }
+    100% {
+      transform: rotateX(-20deg) rotateY(-360deg);
+    }
+  }
+}
+@mixin loading2 {
+  animation: bcc 2.1s linear infinite;
+  @keyframes bcc {
+    0%, 100% {
+      background-color: rgba($black, .4);
+    }
+    33.3% {
+      background-color: rgba($yellow, .4);
+    }
+    66.6% {
+      background-color: rgba($pink, .5);
+    }
+  }
+}
+@mixin loading3 {
+  animation: cc 1.44s var(--a) infinite;
+  @keyframes cc {
+    0%, 100% {
+      opacity: .2;
+    }
+    20% {
+      opacity: .6;
+    }
+  }
+}

@@ -1,0 +1,197 @@
+@use "foundation/base" as *;
+@use "foundation/setting" as *;
+@use "foundation/mixin" as *;
+@use "foundation/module" as *;
+
+@include edge();
+
+.top,
+.wrapper {
+  background-color: $black;
+}
+
+.top {
+  @include hfMargin;
+}
+
+.scroll-fade {
+  @include scrollFade(20px);
+}
+
+.breadcrumbs {
+  background-color: $black;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  nav {
+    margin: 0 auto;
+    max-width: 880px;
+    width: 66%;
+    ul {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      width: 100%;
+      padding-bottom: 4px;
+      background-color: $black;
+      li {
+        max-width: 200px;
+        width: calc(100% / 4);
+        a.scroll-anchor {
+          display: block;
+          width: 100%;
+          padding: 7px 0;
+          text-align: center;
+          // color: $white;
+          @include hoverTransparentize($white, .5);
+          @include hoverLine(2px, $lightgray);
+          span {
+            font-size: 1.2rem;
+            &.eng {
+              font-size: 3rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.wrapper {
+  min-height: 800px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  @include h2();
+}
+
+// 臨時
+.menu {
+  &-contents {
+    width: 100%;
+    ul {
+      margin: 0 auto;
+      max-width: 900px;
+      width: 100%;
+      padding: 0 32px;
+      li {
+        margin-left: 0;
+        margin-right: auto;
+        max-width: 640px;
+        width: 100%;
+        border-radius: 12px;
+        box-shadow: $ds-2;
+        position: relative;
+        overflow: hidden;
+        &::before {
+          content: "";
+          display: block;
+          padding-top: 45%;
+        }
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 12px;
+          object-fit: cover;
+          object-position: center;
+        }
+        >div {
+          min-width: 172px;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          padding: 12px 18px;
+          border-radius: 12px 0 10px 0;
+          background-color: rgba($white, .86);
+          color: $black;
+          transform: translateX(100%);
+          transition: all .5s .1s;
+          p {
+            color: rgba($black, .7);
+            font-size: 1.4rem;
+            &:nth-of-type(2) {
+              position: relative;
+              &::before,
+              &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                bottom: -3px;
+                height: 1px;
+                background-color: rgba($black, .3);
+              }
+              &::before {
+                width: 100%;
+                left: 0;
+              }
+              &::after {
+                width: 23px;
+                right: 0;
+                transform-origin: right;
+                transform: rotate(40deg);
+              }
+              a {
+                display: block;
+                padding-right: 32px;
+                color: rgba($black, 1);
+                font-size: 3.2rem;
+                line-height: .8;
+                @include hoverTransparentize($black, .5);
+                position: relative;
+                &::before,
+                &::after {
+                  content: "";
+                  display: block;
+                  position: absolute;
+                  bottom: -3px;
+                  z-index: 3;
+                  width: 0;
+                  height: 1px;
+                  background-color: $black;
+                }
+                &::before {
+                  left: 0;
+                  transition: all .25s;
+                }
+                &::after {
+                  right: 0;
+                  transform-origin: right;
+                  transform: rotate(40deg);
+                  transition: all .15s .25s;
+                }
+                &:hover {
+                  &::before {
+                    width: 100%;
+                  }
+                  &::after {
+                    width: 23px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        &:not(:first-of-type) {
+          margin-top: 20px;
+        }
+        &:nth-of-type(even) {
+          margin-left: auto;
+          margin-right: 0;
+          box-shadow: $ds-2-2;
+          >div {
+            left: 0;
+            right: auto;
+            border-radius: 0 12px 0 10px;
+            transform: translateX(-100%);
+          }
+        }
+        &.scroll-fade-in {
+          >div {
+            transform: none;
+          }
+        }
+      }
+    }
+  }
+}

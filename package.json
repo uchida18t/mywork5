@@ -1,0 +1,22 @@
+{
+  "name": "20211117",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "scripts": {
+    "dev": "gulp start"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.27.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-notify": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^5.0.0",
+    "gulp-uglify": "^3.0.2"
+  },
+  "dependencies": {
+    "sass": "^1.43.4"
+  }
+}

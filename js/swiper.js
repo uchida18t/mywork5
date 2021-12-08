@@ -1,0 +1,17 @@
+const swiper = new Swiper('.swiper', {
+  loop: true,
+  speed: 900,
+  centeredSlides: true,
+  autoplay: {
+    delay: 4800
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  }
+});
