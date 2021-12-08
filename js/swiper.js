@@ -3,7 +3,8 @@ const swiper = new Swiper('.swiper', {
   speed: 900,
   centeredSlides: true,
   autoplay: {
-    delay: 4800
+    delay: 4800,
+    disableOnInteraction: false
   },
   pagination: {
     el: '.swiper-pagination',
