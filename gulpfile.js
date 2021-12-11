@@ -63,6 +63,12 @@ function apple(done) { //apple-touch-icon
   done();
 }
 
+function imgMin() { // 臨時画像圧縮
+  return src('./src/top-img2.jpg')
+    .pipe(imageMin())
+    .pipe(dest('./images/'));
+}
+
 function styles() { // Sassコンパイル
   return src('./scss/**/*.scss')
   .pipe(plumber({
@@ -106,3 +112,4 @@ exports.bs = serve;
 exports.start = start;
 exports.favicon = favicon;
 exports.apple = apple;
+exports.img = imgMin;

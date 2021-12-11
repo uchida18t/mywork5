@@ -1,10 +1,11 @@
 const swiper = new Swiper('.swiper', {
   loop: true,
   speed: 900,
+  slidesPerView: 1.15,
   centeredSlides: true,
   autoplay: {
     delay: 4800,
-    disableOnInteraction: false
+    // disableOnInteraction: false
   },
   pagination: {
     el: '.swiper-pagination',
