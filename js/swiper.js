@@ -5,7 +5,7 @@ const swiper = new Swiper('.swiper', {
   centeredSlides: true,
   autoplay: {
     delay: 4800,
-    // disableOnInteraction: false
+    disableOnInteraction: false
   },
   pagination: {
     el: '.swiper-pagination',
