@@ -1,4 +1,4 @@
-@use "foundation/setting" as *;
+@use "setting" as s;
 
 // ブレイクポイント
 @mixin bp-1 {
@@ -9,20 +9,20 @@
 
 // ヘッダー分の高さ調整
 @mixin hfMargin($mt: 0px) {
-  margin-top: calc($mt + $headerH);
+  margin-top: calc($mt + s.$headerH);
 }
 
 // 画面端の線
 @mixin edge() {
   @keyframes edge {
     0%, 100% {
-      background-color: rgba($pink, .8);
+      background-color: rgba(s.$pink, .8);
     }
     33.33% {
-      background-color: rgba($white, .8);
+      background-color: rgba(s.$white, .8);
     }
     66.66% {
-      background-color: rgba($yellow, 1);
+      background-color: rgba(s.$yellow, 1);
     }
   }
   .edge {
@@ -85,7 +85,7 @@
     left: 0;
     width: 0px;
     height: $height;
-    background-color: $white;
+    background-color: s.$white;
     transition: width .35s, background-color .2s;
   }
   &:hover {
@@ -101,7 +101,7 @@
   h2 {
     text-align: right;
     font-size: 6.6rem;
-    text-shadow: 3px 3px 4px rgba($gray, .3);
+    text-shadow: 3px 3px 4px rgba(s.$gray, .3);
     transform: translateY(-18px);
     z-index: 5;
     transition: all .3s;
@@ -110,7 +110,7 @@
         font-size: 10.4rem;
       }
       &:nth-of-type(2) {
-        color: $pink;
+        color: s.$pink;
       }
     }
     &.fixed-out {
@@ -155,13 +155,13 @@
   animation: bcc 2.1s linear infinite;
   @keyframes bcc {
     0%, 100% {
-      background-color: rgba($black, .4);
+      background-color: rgba(s.$black, .4);
     }
     33.3% {
-      background-color: rgba($yellow, .4);
+      background-color: rgba(s.$yellow, .4);
     }
     66.6% {
-      background-color: rgba($pink, .5);
+      background-color: rgba(s.$pink, .5);
     }
   }
 }

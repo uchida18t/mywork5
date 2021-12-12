@@ -1,7 +1,4 @@
-@use "foundation/base" as *;
-@use "foundation/setting" as *;
-@use "foundation/mixin" as *;
-@use "foundation/module" as *;
+@use "global" as *;
 
 @include edge();
 

@@ -1,12 +1,12 @@
-@use "foundation/setting" as *;
-@use "foundation/mixin" as *;
+@use "setting" as s;
+@use "mixin" as m;
 
 body {
   max-width: 1366px;
   min-height: 100vh;
   margin: 0 auto;
-  color: $white;
-  background-color: $black;
+  color: s.$white;
+  background-color: s.$black;
   letter-spacing: .024em;
 }
 
@@ -30,7 +30,7 @@ a {
     width: 72px;
     height: 72px;
     transform-style: preserve-3d;
-    @include loading1;
+    @include m.loading1;
   }
   &-square {
     position: absolute;
@@ -38,9 +38,9 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    @include loading2;
-    border: 1px solid rgba($gray, .3);
-    box-shadow: 0 20px 40px rgba($lightgray, .4);
+    @include m.loading2;
+    border: 1px solid rgba(s.$gray, .3);
+    box-shadow: 0 20px 40px rgba(s.$lightgray, .4);
     transform: rotateY(calc(90deg * var(--i))) translateZ(36px);
     &-top {
       position: absolute;
@@ -48,19 +48,19 @@ a {
       left: 0;
       width: 100%;
       height: 100%;
-      @include loading2;
-      border: 1px solid rgba($gray, .3);
+      @include m.loading2;
+      border: 1px solid rgba(s.$gray, .3);
       transform: rotateX(90deg) translateZ(36px);
     }
   }
   p {
     position: absolute;
-    color: $lightgray;
+    color: s.$lightgray;
     font-size: 2.8rem;
     letter-spacing: 0;
     span {
       opacity: .2;
-      @include loading3;
+      @include m.loading3;
     }
   }
   &.loaded {
