@@ -2,17 +2,18 @@
 
 @include edge();
 
-.top,
-.wrapper {
-  background-color: $black;
-}
-
 .top {
   @include hfMargin;
 }
 
 .scroll-fade {
   @include scrollFade(20px);
+}
+
+.wrapper {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  @include h2();
 }
 
 .breadcrumbs {
@@ -53,13 +54,6 @@
   }
 }
 
-.wrapper {
-  min-height: 800px;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  @include h2();
-}
-
 // 臨時
 .menu {
   &-contents {
@@ -75,7 +69,7 @@
         max-width: 640px;
         width: 100%;
         border-radius: 12px;
-        box-shadow: $ds-2;
+        box-shadow: $ds-2-l;
         position: relative;
         overflow: hidden;
         &::before {
@@ -175,7 +169,7 @@
         &:nth-of-type(even) {
           margin-left: auto;
           margin-right: 0;
-          box-shadow: $ds-2-2;
+          box-shadow: $ds-2-r;
           >div {
             left: 0;
             right: auto;

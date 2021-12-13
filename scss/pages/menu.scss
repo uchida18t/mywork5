@@ -1,1 +1,40 @@
-@use "../global";
+@use "../global" as *;
+
+@include edge;
+
+.menu {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: flex-start;
+  padding-top: 14px;
+  padding-bottom: 20px;
+  @include hfMargin;
+  h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 3.3rem;
+    text-shadow: 3px 3px 4px rgba($gray, .3);
+    span {
+      color: $pink;
+    }
+  }
+  ul {
+    max-width: 200px;
+    width: 20%;
+    min-height: 360px;
+    background-color: $white;
+  }
+  &-contents {
+    min-width: calc(100% - 200px);
+    width: 80%;
+    min-height: 360px;
+  }
+  @include bp-900 {
+    padding-top: 12px;
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+}

@@ -1,7 +1,8 @@
 // box-shadow
 $ds-1: 0 3px 7px rgba(20, 20, 20, .4);
-$ds-2: 5px 5px 8px rgba(0, 0, 0, 0.6);
-$ds-2-2: -5px 5px 8px rgba(0, 0, 0, 0.6);
+$ds-2-l: 5px 5px 8px rgba(0, 0, 0, 0.6);
+$ds-2-r: -5px 5px 8px rgba(0, 0, 0, 0.6);
+$ds-3: 8px 0 10px rgba(0, 0, 0, 1), -8px 0 10px rgba(0, 0, 0, .6);
 
 // color
 $black: #222222;
@@ -15,19 +16,4 @@ $yellow: #EFF556;
 
 // ヘッダーのheight
 $headerH: 85px;
-$spHeaderH: 52px;
-
-// 強調英字
-.eng {
-  font-family: 'Crimson Pro', serif;
-  letter-spacing: .06em;
-  &2 {
-    font-family: 'Readex Pro', sans-serif;
-    letter-spacing: .04em;
-  }
-}
-
-// span改行
-span.s-br {
-  display: block;
-}
+$spHeaderH: 63px;

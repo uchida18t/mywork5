@@ -26,6 +26,13 @@ header {
       width: 100%;
     }
   }
+  @include m.bp-900 {
+    min-height: s.$spHeaderH;
+    h1 {
+      width: 126px;
+      padding: 12px 0;
+    }
+  }
 } // header
 
 // swiper
@@ -50,8 +57,7 @@ header {
     &-active {
       pointer-events: auto;
       opacity: 1;
-      box-shadow: s.$ds-2,
-                  s.$ds-2-2;
+      box-shadow: s.$ds-3;
     }
     img {
       width: 100%;
@@ -141,5 +147,8 @@ header {
         box-shadow: -4px 4px 6px rgba(s.$white, .75);
       }
     }
+  }
+  @include m.bp-900 {
+    height: calc(100vh - (s.$spHeaderH + 80px));
   }
 }

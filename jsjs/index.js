@@ -22,7 +22,7 @@
     anchors[i].addEventListener('click', () => {
       if (window.innerWidth < 900) {
         window.scrollTo({
-          top: targetRect - 74,
+          top: targetRect - 63,
           behavior: 'smooth'
         });
       } else {
@@ -40,33 +40,35 @@
   const wrappers = document.querySelectorAll('.wrapper');
   const headings = document.querySelectorAll('.wrapper-heading');
   window.addEventListener('scroll', () => {
-    for (let i = 0; i < wrappers.length; i++) {
-      const wrapper = wrappers[i];
-      const wHeight = wrapper.clientHeight * -1;
-      const targetRect = wrapper.getBoundingClientRect().top;
-      const heading = headings[i];
-      if (window.innerWidth < 900) {
-        if (
-          wHeight + 200 <= targetRect - 74 &&
-          targetRect - 74 <= 0
-        ) {
-          wrapper.classList.add('fixed');
+    if (wrappers.length > 1) {
+      for (let i = 0; i < wrappers.length; i++) {
+        const wrapper = wrappers[i];
+        const wHeight = wrapper.clientHeight * -1;
+        const targetRect = wrapper.getBoundingClientRect().top;
+        const heading = headings[i];
+        if (window.innerWidth < 900) {
+          if (
+            wHeight + 200 <= targetRect - 63 &&
+            targetRect - 63 <= 0
+          ) {
+            wrapper.classList.add('fixed');
+          } else {
+            wrapper.classList.remove('fixed');
+          }
         } else {
-          wrapper.classList.remove('fixed');
-        }
-      } else {
-        if (targetRect - 85 <= 0) {
-          wrapper.classList.add('fixed');
-        } else {
-          wrapper.classList.remove('fixed');
-        }
-        if (
-          wHeight + 340 <= targetRect - 85 &&
-          targetRect - 85 <= 0
-        ) {
-          heading.classList.remove('fixed-out');
-        } else if (wHeight + 340 > targetRect - 85) {
-          heading.classList.add('fixed-out');
+          if (targetRect - 85 <= 0) {
+            wrapper.classList.add('fixed');
+          } else {
+            wrapper.classList.remove('fixed');
+          }
+          if (
+            wHeight + 340 <= targetRect - 85 &&
+            targetRect - 85 <= 0
+          ) {
+            heading.classList.remove('fixed-out');
+          } else if (wHeight + 340 > targetRect - 85) {
+            heading.classList.add('fixed-out');
+          }
         }
       }
     }

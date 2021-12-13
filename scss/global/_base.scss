@@ -77,3 +77,23 @@ a {
     opacity: 1;
   }
 }
+
+.wrapper {
+  min-height: 800px;
+  background-color: s.$black;
+}
+
+// 強調英字
+.eng {
+  font-family: 'Crimson Pro', serif;
+  letter-spacing: .06em;
+  &2 {
+    font-family: 'Readex Pro', sans-serif;
+    letter-spacing: .04em;
+  }
+}
+
+// span改行
+span.s-br {
+  display: block;
+}
