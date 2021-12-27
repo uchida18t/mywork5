@@ -1,7 +1,7 @@
 @use "setting" as s;
 
 // ブレイクポイント
-@mixin bp-1 {
+@mixin bp-1124 {
   @media (max-width: 1124px) {
     @content;
   }
@@ -62,7 +62,7 @@
         height: 100%;
       }
     }
-    @include bp-1 {
+    @include bp-1124 {
       padding-left: 30px;
       padding-right: 30px;
       &::before {

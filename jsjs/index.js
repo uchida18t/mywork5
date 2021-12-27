@@ -105,3 +105,40 @@
     }
   });
 }
+
+// ローカルストレージ(/menuへ遷移する際の情報)
+{
+  const all = document.querySelectorAll('.set-all');
+  const confs = document.querySelectorAll('.set-conf');
+  const breads = document.querySelectorAll('.set-bread');
+  const drinks = document.querySelectorAll('.set-drink');
+  function rm() {
+    localStorage.removeItem('PRESQUE POURRIE');
+  }
+  function set(i) {
+    localStorage.setItem('PRESQUE POURRIE', i);
+  }
+  all.forEach(a => {
+    a.addEventListener('click', () => {
+      rm();
+    });
+  });
+  confs.forEach(c => {
+    c.addEventListener('click', () => {
+      rm();
+      set('CONFECTIONERY');
+    });
+  });
+  breads.forEach(b => {
+    b.addEventListener('click', () => {
+      rm();
+      set('BREAD');
+    });
+  });
+  drinks.forEach(d => {
+    d.addEventListener('click', () => {
+      rm();
+      set('DRINK');
+    });
+  });
+}
