@@ -66,7 +66,7 @@
     });
   }
   displayMenu().catch(() => {
-    alert('だめー');
+    alert('申し訳ございませんが、お使いのブラウザではメニューを表示できません。');
   });
 
   const all = document.querySelector('.set-all');
