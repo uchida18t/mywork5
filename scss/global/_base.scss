@@ -78,7 +78,7 @@ a {
 
 .content {
   opacity: 0;
-  transition: all 1s .1s;
+  transition: all 2s .1s;
   &.loaded {
     opacity: 1;
   }
