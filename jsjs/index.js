@@ -113,10 +113,10 @@
   const breads = document.querySelectorAll('.set-bread');
   const drinks = document.querySelectorAll('.set-drink');
   function rm() {
-    localStorage.removeItem('PRESQUE POURRIE');
+    localStorage.removeItem('menu_category');
   }
   function set(i) {
-    localStorage.setItem('PRESQUE POURRIE', i);
+    localStorage.setItem('menu_category', i);
   }
   all.forEach(a => {
     a.addEventListener('click', () => {
