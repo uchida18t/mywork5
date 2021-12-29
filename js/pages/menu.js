@@ -72,6 +72,13 @@
   const drink = document.querySelector('.set-drink');
   function rm() {
     localStorage.removeItem('PRESQUE POURRIE');
+    let count = ul.childElementCount;
+    if (count > 0) {
+      while (count > 0) {
+        ul.removeChild(ul.firstElementChild);
+        count--;
+      }
+    }
   }
   function set(i) {
     localStorage.setItem('PRESQUE POURRIE', i);

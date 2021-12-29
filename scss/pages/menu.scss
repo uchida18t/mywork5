@@ -61,9 +61,6 @@
         font-size: 2.0rem;
         cursor: pointer;
       }
-      &:not(:first-of-type) {
-        border-bottom: 1px solid rgba($gray, .3);
-      }
       &.selected {
         border-bottom: none;
         pointer-events: none;
@@ -79,6 +76,7 @@
         }
       }
       &:not(.selected) {
+        border-bottom: 1px solid rgba($gray, .3);
         &:hover {
           border-bottom: 1px solid rgba($lightgray, .6);
           p {
@@ -120,6 +118,7 @@
         }
         &:nth-of-type(2) {
           margin-top: 10px;
+          font-size: 1.4rem;
         }
       }
     }
