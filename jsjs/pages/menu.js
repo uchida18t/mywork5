@@ -64,6 +64,9 @@
         p1.appendChild(img);
       }
     });
+    document.querySelectorAll('.menu-contents-li').forEach((li, index) => {
+      li.style.animationDelay = index * .1 + 's';
+    });
   }
   displayMenu().catch(() => {
     alert('申し訳ございませんが、お使いのブラウザではメニューを表示できません。');
