@@ -41,7 +41,7 @@
           text-align: center;
           // color: $white;
           @include hoverTransparentize($white, .5);
-          @include hoverLine(2px, $lightgray);
+          @include hoverLine(2px, $gray);
           span {
             font-size: 1.2rem;
             &.eng {
@@ -151,15 +151,27 @@
                   transform: rotate(40deg);
                   transition: all .15s .25s;
                 }
-                &:hover {
-                  &::before {
-                    width: 100%;
-                  }
-                  &::after {
-                    width: 23px;
-                  }
-                }
+                // &:hover {
+                //   &::before {
+                //     width: 100%;
+                //   }
+                //   &::after {
+                //     width: 23px;
+                //   }
+                // }
               }
+            }
+          }
+        }
+        &:hover {
+          opacity: .7;
+          cursor: pointer;
+          >div p:nth-of-type(2) a {
+            &::before {
+              width: 100%;
+            }
+            &::after {
+              width: 23px;
             }
           }
         }

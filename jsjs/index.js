@@ -112,33 +112,40 @@
   const confs = document.querySelectorAll('.set-conf');
   const breads = document.querySelectorAll('.set-bread');
   const drinks = document.querySelectorAll('.set-drink');
-  function rm() {
+  function rm() { // 1. delete(reset) localStorage
     localStorage.removeItem('menu_category');
   }
-  function set(i) {
+  function set(i) { // 2. set localStorage
     localStorage.setItem('menu_category', i);
+  }
+  function toMenu() { // 3. open menu page
+    window.open('/mywork5/menu/', '_self');
   }
   all.forEach(a => {
     a.addEventListener('click', () => {
       rm();
+      toMenu();
     });
   });
   confs.forEach(c => {
     c.addEventListener('click', () => {
       rm();
       set('CONFECTIONERY');
+      toMenu();
     });
   });
   breads.forEach(b => {
     b.addEventListener('click', () => {
       rm();
       set('BREAD');
+      toMenu();
     });
   });
   drinks.forEach(d => {
     d.addEventListener('click', () => {
       rm();
       set('DRINK');
+      toMenu();
     });
   });
 }
