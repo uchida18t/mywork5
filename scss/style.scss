@@ -128,8 +128,8 @@
                 color: rgba($black, 1);
                 font-size: 3.2rem;
                 line-height: .8;
-                @include hoverTransparentize($black, .5);
                 position: relative;
+                transition: all .4s;
                 &::before,
                 &::after {
                   content: "";
@@ -151,14 +151,6 @@
                   transform: rotate(40deg);
                   transition: all .15s .25s;
                 }
-                // &:hover {
-                //   &::before {
-                //     width: 100%;
-                //   }
-                //   &::after {
-                //     width: 23px;
-                //   }
-                // }
               }
             }
           }
@@ -167,6 +159,7 @@
           opacity: .7;
           cursor: pointer;
           >div p:nth-of-type(2) a {
+            color: rgba($black, .5);
             &::before {
               width: 100%;
             }

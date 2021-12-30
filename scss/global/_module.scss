@@ -30,6 +30,26 @@ header {
       opacity: .8;
     }
   }
+  .header-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 28px;
+    height: 100%;
+    a {
+      display: block;
+      color: s.$lightgray;
+      @include m.hoverTransparentize(s.$lightgray, .7);
+      &:not(:first-of-type) {
+        margin-left: 20px;
+      }
+      i {
+        font-size: 2.8rem;
+      }
+    }
+  }
   @include m.bp-900 {
     min-height: s.$spHeaderH;
     h1 {
