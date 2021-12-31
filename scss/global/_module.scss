@@ -184,3 +184,15 @@ header {
     height: calc(100vh - (s.$spHeaderH + 80px));
   }
 }
+
+footer {
+  min-height: calc(s.$headerH * 1.6);
+  padding: 0 40px;
+  background-color: s.$black;
+  box-shadow: (s.$ds-2);
+  position: relative;
+  @include m.bp-1124 {
+    min-height: calc(s.$spHeaderH * 1.6);
+    padding: 0 20px;
+  }
+}

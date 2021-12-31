@@ -28,7 +28,7 @@
   }
 
   const ul = document.querySelector('.menu-contents-ul');
-  const json = '/mywork5/menu.json';
+  const json = '/mywork5/data/menu.json';
   async function displayMenu() {
     const preData = await fetch(json);
     const data = await preData.json();
