@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PRESQUE POURRIE | Official Site</title>
+  <title>NEWS | PRESQUE POURRIE | Official Site</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Readex+Pro&display=swap" rel="stylesheet">
@@ -28,7 +28,7 @@
   <link rel="manifest" href="/mywork5/manifest.json">
   <link rel="stylesheet" href="/mywork5/css/reset.css">
   <link rel="stylesheet" href="/mywork5/css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="/mywork5/css/style.css">
+  <link rel="stylesheet" href="/mywork5/css/pages/news.css">
 </head>
 
 <body>
@@ -89,120 +89,21 @@
 
   <!-- content -->
   <div id="content" class="content">
-    <main class="top edge">
-      <div class="swiper">
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide set-conf">
-            <img src="/mywork5/images/top-img1.jpg" alt="top-img1">
-          </div>
-          <div class="swiper-slide set-conf">
-            <img src="/mywork5/images/top-img2.jpg" alt="top-img2">
-          </div>
-          <div class="swiper-slide set-conf">
-            <img src="/mywork5/images/top-img3.jpg" alt="top-img3">
-          </div>
-          <div class="swiper-slide set-bread">
-            <img src="/mywork5/images/top-img4.jpg" alt="top-img4">
-          </div>
-        </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-      </div>
-    </main>
-
-    <div class="breadcrumbs edge">
-      <nav>
-        <ul>
-          <li>
-            <a class="scroll-anchor"><span class="eng">MENU</span><span class="s-br">メニュー</span></a>
-          </li>
-          <li>
-            <a class="scroll-anchor"><span class="eng">NEWS</span><span class="s-br">ニュース</span></a>
-          </li>
-          <li>
-            <a class="scroll-anchor"><span class="eng">EVENT</span><span class="s-br">イベント</span></a>
-          </li>
-          <li>
-            <a class="scroll-anchor"><span class="eng">CONTACT</span><span class="s-br">お問い合わせ</span></a>
-          </li>
-        </ul>
-      </nav>
-    </div>
 
     <article>
-      <section class="wrapper menu edge target">
-        <h2 class="wrapper-heading eng2">
-          <span>M</span>E<span>N</span>U
-        </h2>
-        <div class="menu-contents">
-          <ul>
-            <li class="scroll-fade set-conf to-menu"> <!-- 1 -->
-              <img src="/mywork5/images/menu-img1.jpg" alt="menu-img1">
-              <div>
-                <p>洋菓子</p>
-                <p>
-                  <a href="/mywork5/menu/"><span class="eng">CONFECTIONERY</span></a>
-                </p>
-              </div>
-            </li>
-            <li class="scroll-fade set-bread to-menu"> <!-- 2 -->
-              <img src="/mywork5/images/menu-img2.jpg" alt="menu-img2">
-              <div>
-                <p>パン</p>
-                <p>
-                  <a href="/mywork5/menu/"><span class="eng">BREAD</span></a>
-                </p>
-              </div>
-            </li>
-            <li class="scroll-fade set-drink to-menu"> <!-- 3 -->
-              <img src="/mywork5/images/menu-img3.jpg" alt="menu-img3">
-              <div>
-                <p>ドリンク</p>
-                <p>
-                  <a href="/mywork5/menu/"><span class="eng">DRINK</span></a>
-                </p>
-              </div>
-            </li>
-            <li class="scroll-fade set-bread to-menu"> <!-- 4 -->
-              <img src="/mywork5/images/menu-img2.jpg" alt="menu-img2">
-              <div>
-                <p>パン</p>
-                <p>
-                  <a href="/mywork5/menu/"><span class="eng">BREAD</span></a>
-                </p>
-              </div>
-            </li>
-          </ul>
-          <a class="eng set-all" href="/mywork5/menu/">CHECK ALL</a>
-        </div>
-      </section>
-
-      <section class="wrapper news edge target">
-        <h2 class="wrapper-heading eng2">
-          <span>N</span>E<span>W</span>S
-        </h2>
+      <section class="wrapper news edge">
+        <h1 class="eng2">NE<span>W</span>S</h1>
+        <ul>
+          <li class="news-list-target set-all"><p class="eng">ALL</p></li>
+          <li class="news-list-target set-conf"><p class="eng">CONFECTIONERY</p></li>
+          <li class="news-list-target set-bread"><p class="eng">BREAD</p></li>
+          <li class="news-list-target set-drink"><p class="eng">DRINK</p></li>
+        </ul>
         <div class="news-contents">
           <ul class="news-contents-ul">
-            <!-- create children of li by JS -->
-            <li class="news-contents-li scroll-fade"></li>
-            <li class="news-contents-li scroll-fade"></li>
-            <li class="news-contents-li scroll-fade"></li>
+            <!-- create li and children by JS -->
           </ul>
         </div>
-      </section>
-
-      <section class="wrapper event edge target" style="min-height: 500px;">
-        <h2 class="wrapper-heading eng2">
-          <span>E</span>VE<span>N</span>T
-        </h2>
-      </section>
-
-      <section class="wrapper contact edge target" style="min-height: 500px;">
-        <h2 class="wrapper-heading eng2">
-          <span>C</span>ONTA<span>C</span>T
-        </h2>
       </section>
     </article>
 
@@ -258,8 +159,6 @@
     </footer>
   </div>
 
-  <script src="/mywork5/js/swiper-bundle.min.js"></script>
-  <script src="/mywork5/js/swiper.js"></script>
-  <script src="/mywork5/js/index.js"></script>
+  <script src="/mywork5/js/pages/news.js"></script>
 </body>
 </html>

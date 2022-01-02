@@ -1,0 +1,1 @@
+"use strict";{const a=document.getElementById("loading"),b=document.getElementById("content"),c=document.querySelectorAll(".edge");document.addEventListener("DOMContentLoaded",()=>{a.classList.add("loaded"),b.classList.add("loaded"),c.forEach(e=>{e.classList.add("loaded")})})}
