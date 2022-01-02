@@ -1,17 +1,20 @@
 [
   {
     "title": "2022年もよろしくお願いいたします。",
-    "category": "NEWS",
-    "date": "2021-12-27"
+    "index": 2,
+    "date": "2021-12-27",
+    "category": "2021-12"
   },
   {
     "title": "コロナウイルス等への対応につきまして",
-    "category": "NEWS",
-    "date": "2021-12-25"
+    "index": 1,
+    "date": "2021-12-25",
+    "category": "2021-12"
   },
   {
     "title": "OPEN.",
-    "category": "NEWS",
-    "date": "2021-12-25"
+    "index": 0,
+    "date": "2021-12-25",
+    "category": "2021-12"
   }
 ]
